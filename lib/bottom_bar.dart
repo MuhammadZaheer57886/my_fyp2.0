@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_fyp/pages/feedback.dart';
 import 'package:my_fyp/pages/home_page.dart';
+import 'package:my_fyp/pages/profile.dart';
+import 'package:my_fyp/pages/search.dart';
 //this is bottom navigation bar
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -12,9 +15,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
   final screens=[
     const HomePage(),
-    const Center(child: Text('search',)),
-    const Center(child: Text('feedback',)),
-    const Center(child: Text('profile',)),
+    const Search(),
+    const FeedBack(),
+    const Profile(),
   ];
   
 

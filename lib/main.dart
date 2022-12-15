@@ -11,9 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'my app',
       theme: ThemeData(),
-      
-
       routes: {
         "/": (context) => const BottomNavBar(),
         // "/home":(context) => 
