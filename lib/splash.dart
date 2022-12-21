@@ -3,7 +3,7 @@
 import 'dart:async';
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
-import 'package:my_fyp/pages/home_page.dart';
+import 'package:my_fyp/pages/home/home_page.dart';
 
 class Splash extends StatefulWidget {
   // ignore: prefer_const_constructors_in_immutables

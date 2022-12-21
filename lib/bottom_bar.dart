@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_fyp/pages/feedback.dart';
-import 'package:my_fyp/pages/home_page.dart';
+import 'package:my_fyp/pages/home/home_page.dart';
 import 'package:my_fyp/pages/profile.dart';
 import 'package:my_fyp/pages/search.dart';
 //this is bottom navigation bar
@@ -30,17 +30,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: const [
-            Text(
-              'Learning Hub',
-              style: TextStyle(color: Colors.black),
-            )
-          ],
-        ),
-        backgroundColor: Colors.white,
-      ),
       body: screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
 
@@ -72,7 +61,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         selectedItemColor: Colors.black87,
         unselectedItemColor: Colors.black87,
         onTap: _onItemTapped,
-        iconSize: 35,
+        iconSize: 30,
         selectedFontSize: 20,
         type: BottomNavigationBarType.fixed,
       ),

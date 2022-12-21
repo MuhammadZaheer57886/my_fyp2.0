@@ -42,9 +42,9 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
 flutter_native_splash:
-  image: assets/img/flutter_ui_dev_logo.png
+  image: assets/img/splash/flutter_ui_dev_logo.png
   color: "#f9f9f9"
-  image_dark: assets/img/flutter_ui_dev_logo_dark.png
+  image_dark: assets/img/splash/flutter_ui_dev_logo_dark.png
   color_dark: "#000000"
 
 # The following section is specific to Flutter packages.
@@ -52,6 +52,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/img/
+    - assets/img/quotes/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
