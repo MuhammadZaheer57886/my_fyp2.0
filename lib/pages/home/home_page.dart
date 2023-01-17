@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_fyp/pages/home/widget/departments.dart';
 import 'package:my_fyp/pages/home/widget/header.dart';
 import 'package:my_fyp/pages/home/widget/quotes.dart';
 import 'package:my_fyp/pages/home/widget/search_bar.dart';
@@ -14,8 +15,8 @@ class HomePage extends StatelessWidget {
           children: [
             Container(
               height: 180,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(243, 0, 43, 59),
+              decoration:  const BoxDecoration(
+                color: Color.fromARGB(222, 107, 42, 220),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -40,8 +41,10 @@ class HomePage extends StatelessWidget {
             ),
             //Now I am going to create some Motivational quotes section
             Column(
-              children: const [
-                Quotes(),
+              children: [
+                const Quotes(),
+                // this is the department section
+                Departments(),
               ],
             )
           ],

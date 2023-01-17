@@ -40,15 +40,16 @@ class _QuotesState extends State<Quotes> {
   @override
   void initState() {
     super.initState();
-    timer = Timer.periodic(const Duration(seconds: 2), (timer) {
-      if (_selectedPromo < 2) {
+    timer = Timer.periodic(const Duration(seconds: 3), (timer) {
+      if (_selectedPromo < 4) {
         _selectedPromo++;
       } else {
         _selectedPromo = 0;
       }
       if (controller.positions.isNotEmpty) {
         controller.animateToPage(_selectedPromo,
-            duration: const Duration(milliseconds: 400), curve: Curves.easeOutExpo);
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.easeOutExpo);
       }
     });
   }
@@ -76,12 +77,13 @@ class _QuotesState extends State<Quotes> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 for (int index = 0; index < widgetList.length; index++)
-                  if (index == _selectedPromo) ...[createCircle(true)] 
-                  else
+                  if (index == _selectedPromo) ...[createCircle(true)] else
                     createCircle(false)
               ],
             ),
           ),
-        ]));
+        ]
+      )
+    );
   }
 }
