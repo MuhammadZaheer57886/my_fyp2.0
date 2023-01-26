@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          
           child: Column(
             children: [
               Container(

@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:my_fyp/data_provider/departments_class.dart';
 
@@ -12,29 +11,35 @@ class DepartmentDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:CustomScrollView(
+      body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            primary: true,
-            pinned: true,
             expandedHeight: 200,
-            title: Text(department.name,),
+            pinned: true,
             flexibleSpace: FlexibleSpaceBar(
-              background: Container(
-                color: const Color.fromARGB(222, 107, 42, 220),
-                
+              title: Text(department.name,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 16.0,
+                  )),
+              background: Image.asset(
+                department.img,
+                fit: BoxFit.cover,
               ),
             ),
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return ListTile(
-                  title: Text("List tile $index"),
+                return Container(
+                  color: index.isOdd ? Colors.white : Colors.black12,
+                  height: 100.0,
+                  child: Center(
+                    child: Text('$index', textScaleFactor: 5),
+                  ),
                 );
               },
-              childCount: 30,
-              
+              childCount: 20,
             ),
           ),
         ],
