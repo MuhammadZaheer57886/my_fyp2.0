@@ -4,9 +4,14 @@ import 'package:my_fyp/pages/home/widget/depart/department_detail.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 import '../../../data_provider/departments_class.dart';
 
-class Departments extends StatelessWidget {
-   Departments({Key? key}) : super(key: key);
-  
+class Departments extends StatefulWidget {
+   const Departments({Key? key}) : super(key: key);
+
+  @override
+  State<Departments> createState() => _DepartmentsState();
+}
+
+class _DepartmentsState extends State<Departments> {
   final List<Department> departmentList  = [
       Department('assets/img/laptop.jpg' , 'Computer Science',),
       Department('assets/img/islamic_studies.jpg','Islamiyart',),
@@ -15,7 +20,6 @@ class Departments extends StatelessWidget {
     ];
 
 //department data for listview
-
   @override
   Widget build(BuildContext context) {
     
@@ -61,14 +65,16 @@ class Departments extends StatelessWidget {
       ],
     );
   }
+
   Widget _buildListItem(BuildContext context,int index){
     Department department = departmentList[index];
-    return GestureDetector(
+    return InkWell(
       onTap: () {
        Navigator.push(context, MaterialPageRoute(builder: (context)=>
-        const DepartmentDetail(),
+         DepartmentDetail(department:department),
        )); 
       },
+      
       child: SizedBox(
         width: 150,
         height: 150,
@@ -95,5 +101,4 @@ class Departments extends StatelessWidget {
       ),
     );
   }
-  
 }

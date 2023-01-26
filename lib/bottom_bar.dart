@@ -36,7 +36,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home),
+            activeIcon: Icon(Icons.home,color: Colors.black,),
             label: 'Home',
           ),
           BottomNavigationBarItem(
